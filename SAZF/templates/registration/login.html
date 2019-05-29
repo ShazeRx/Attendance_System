@@ -1,0 +1,12 @@
+{%block content%}
+ <form method="post" >
+        {% csrf_token %}
+        <p>{{ form.username.label_tag }}</p>
+        <p>{{ form.username }}</p>
+        <p>{{ form.password.label_tag }}</p>
+        <p>{{ form.password  }}</p>
+    <button type="submit">Login</button>
+
+</form>
+
+{%endblock%}
