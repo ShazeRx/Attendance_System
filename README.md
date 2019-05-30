@@ -24,7 +24,7 @@ Scheme for Front-End and page management
   <li> Profile</li>
   <li> Lessons/Work routine</li>
   <li> Messages</li>
-  <li> Notes</li>
+  <li> Notes- DONE!</li>
   
 
 
