@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'notes',
     'message',
+    'lessons',
 
     'teacher.apps.TeacherConfig',
 
