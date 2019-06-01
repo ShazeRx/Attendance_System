@@ -22,7 +22,7 @@ Scheme for Front-End and page management
     <li> Dashboard</li>
   <li>Session</li>
   <li> Profile</li>
-  <li> Lessons/Work routine</li>
+  <li> Lessons/Work routine- DONE</li>
   <li> Messages - Done!</li>
   <li> Notes- DONE!</li>
   
