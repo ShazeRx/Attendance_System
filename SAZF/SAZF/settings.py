@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'notes',
     'message',
     'lessons',
+    'student',
 
     'teacher.apps.TeacherConfig',
 

@@ -8,5 +8,14 @@ class CustomUserAdmin(UserAdmin):
     form = UserChangeForm
     model=Teacher
 
+    fieldsets = UserAdmin.fieldsets + (
+        ('Teacher Profile', {'fields': ('surname','age','have_class','clas',),},),
+    )
     list_display = ('username','surname','age','have_class')
 admin.site.register(Teacher,CustomUserAdmin)
+
+
+
+
+
+

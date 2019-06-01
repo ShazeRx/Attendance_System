@@ -2,6 +2,7 @@ from django.db import models
 import sys
 sys.path.append("..")
 from teacher.models import Teacher
+from student.models import Clas
 
 
 class Lesson(models.Model):
@@ -20,9 +21,9 @@ class Lesson(models.Model):
     name=models.CharField(max_length=25,null=False,blank=False)
     teacher=models.ForeignKey(Teacher,related_name='teacher',blank=False,null=False,on_delete=models.CASCADE)
     lesson_number=models.IntegerField(choices=lesson_number)
-    clas=models.CharField(max_length=2)
+    clas=models.OneToOneField(Clas,on_delete=models.CASCADE,related_name='clas_lesson',blank=False,null=False)
     day_of_week=models.IntegerField(choices=day)
-    room=models.IntegerField(max_length=3)
+    room=models.IntegerField()
 
 
 
