@@ -9,6 +9,10 @@ class Clas(models.Model):
     name=models.TextField(max_length=3)
 
 
+    def __str__(self):
+        return self.name
+
+
 
 class Student(models.Model):
     name=models.CharField(max_length=25)

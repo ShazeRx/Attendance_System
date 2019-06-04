@@ -5,8 +5,8 @@ from .models import Teacher
 class UserCreateForm(UserCreationForm):
     class Meta:
         model=Teacher
-        fields=('username','surname')
+        fields=('username','surname',)
 class UserChangeeForm(UserChangeForm):
     class Meta:
         model=Teacher
-        fields=('username','surname')
+        fields=('username','surname',)
