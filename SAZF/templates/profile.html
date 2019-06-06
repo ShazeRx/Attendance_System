@@ -1,0 +1,15 @@
+{%extends "base.html" %}
+
+
+{%block content%}
+
+{%for teacher in profile%}
+<p>{{teacher.name}}</p>
+<p>{{teacher.surname}}</p>
+<p>{{teacher.age}}</p>
+<p>{{teacher.age_of_enter}}</p>
+<p>{{teacher.have_class}}</p>
+<p>{{teacher.clas}}</p>
+{%endfor%}
+
+{%endblock%}

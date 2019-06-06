@@ -1,0 +1,22 @@
+{%extends "base.html" %}
+
+
+{%block content%}
+{%if notes%}
+{%for note in notes%}
+
+    <p>{{note.content}}</p>
+    <button>Delete</button>
+ <button>Change</button>
+
+
+
+{%endfor%}
+
+{%else%}
+    <p>There is no notes</p>
+{%endif%}
+<br><br>
+<button>Add note</button>
+
+{%endblock%}
