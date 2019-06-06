@@ -4,7 +4,7 @@ from .forms import MessageCreateForm
 
 @admin.register(Message)
 class MessageAdmin(admin.ModelAdmin):
-    fields = ('sender', 'owner','content')
-    list_display = ('sender','owner','date')
+    fields = ('sender', 'owner','topic','content',)
+    list_display = ('sender','owner','topic','date')
     form=MessageCreateForm
 

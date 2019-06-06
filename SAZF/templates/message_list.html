@@ -1,0 +1,13 @@
+{%extends "base.html" %}
+
+
+{%block content%}
+
+        {% for message in object_list %}
+<p>{{ message.topic }}</p>
+<p>{{message.sender}}</p>
+<p>{{message.content}}</p>
+<p>{{message.date}}</p>
+        {% endfor %}
+
+{%endblock%}

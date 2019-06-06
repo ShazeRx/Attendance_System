@@ -14,6 +14,7 @@ urlpatterns = [
     path('main/',include('main.urls') ),
     path('notes/',include('notes.urls') ),
     path('teacher/',include('teacher.urls') ),
+    path('messages/',include('message.urls') ),
 
 ]
 
