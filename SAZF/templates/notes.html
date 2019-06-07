@@ -6,8 +6,8 @@
 {%for note in notes%}
 
     <p>{{note.content}}</p>
-    <button>Delete</button>
- <button>Change</button>
+    <button onclick="location.href='{%url 'delete' note.id %}';">Delete</button>
+ <button onclick="location.href='{%url  'update' note.id%}';">Change</button>
 
 
 
@@ -17,6 +17,7 @@
     <p>There is no notes</p>
 {%endif%}
 <br><br>
-<button>Add note</button>
+
+<button onclick="location.href='{%url 'add'%}';">Add note</button>
 
 {%endblock%}

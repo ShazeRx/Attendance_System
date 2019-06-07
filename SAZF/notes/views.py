@@ -20,7 +20,7 @@ def show_notes(request):
 class NoteDetail(LoginRequiredMixin,generic.DetailView):
     template_name = 'note_detail.html'
     model = Note
-    login_url = '/login/'
+
     redirect_field_name = 'redirect_to'
 
 class NoteDelete(LoginRequiredMixin,generic.DeleteView):
@@ -32,6 +32,13 @@ class NoteUpdate(LoginRequiredMixin,generic.UpdateView):
     model = Note
     template_name = 'note-update.html'
     fields = ['content']
+class NoteAdd(LoginRequiredMixin,generic.CreateView):
+    model = Note
+    template_name = 'note-add.html'
+    fields = ['content']
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super(NoteAdd, self).form_valid(form)
 
 
 
