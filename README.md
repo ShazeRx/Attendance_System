@@ -21,7 +21,7 @@ Scheme for Front-End and page management
    <ul>
     <li> Dashboard</li>
   <li>Session</li>
-  <li> Profile</li>
+  <li> Profile-DONE!</li>
   <li> Lessons/Work routine- DONE</li>
   <li> Messages - Done!</li>
   <li> Notes- DONE!</li>
