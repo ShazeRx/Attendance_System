@@ -39,9 +39,13 @@ Scheme for Front-End and page management
 
 
 How to install
+
 -Create venv
+
 - git clone https://github.com/ShazeRx/Attendance_System.git
+
 -copy all files from folder Attendance_System except .git file to venv directory
+
 -pip install --upgrade -r requriements.txt
 
     
