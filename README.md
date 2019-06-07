@@ -46,6 +46,8 @@ How to install
 
 -copy all files from folder Attendance_System except .git file to venv directory
 
+-enter venv
+
 -pip install --upgrade -r requriements.txt
 
 - enter SAZF folder
