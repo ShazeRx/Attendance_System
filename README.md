@@ -36,6 +36,11 @@ Scheme for Front-End and page management
 
 
 </ul>
+
+
+How to install
+- git clone https://github.com/ShazeRx/Attendance_System.git
+
     
 
 
