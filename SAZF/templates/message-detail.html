@@ -2,11 +2,22 @@
 
 {%block content%}
 
-<h1>{{object.sender}}</h1>
-<p>{{object.topic}}</p>
-<p>{{object.content}}</p>
-<p>{{object.date}}</p>
-<button>Delete</button>
-<button>Reply</button>
+
+<div class="card text-center">
+  <div class="card-header">
+    {{object.sender}}
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{object.topic}}</h5>
+    <p class="card-text">{{object.content}}</p>
+    <button type="button" class="btn btn-success">Reply</button>
+<button type="button" class="btn btn-danger">Delete</button>
+  </div>
+  <div class="card-footer text-muted">
+    {{object.date}}
+  </div>
+</div>
+
+
 
 {%endblock%}

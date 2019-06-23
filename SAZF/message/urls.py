@@ -1,5 +1,7 @@
 from django.urls import path
 from .views import ShowMessages,SendMessage,MessageDetail
+from django.conf.urls.  static import static
+
 
 
 urlpatterns = [

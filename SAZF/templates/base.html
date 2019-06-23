@@ -1,5 +1,5 @@
 {%load static%}
-
+{% load widget_tweaks %}
 
 
 <!doctype html>
@@ -11,21 +11,50 @@
 
 
     <!-- Bootstrap CSS -->
+     <script src="https://kit.fontawesome.com/e9327be86a.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static "main.css" %}">
 
-    <title>zabawa</title>
+    <title>S.A.Z.F</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700&amp;subset=latin-ext" rel="stylesheet">
   </head>
   <body>
-    <nav class="navbar navbar-dark bg-dark shadow pb-2 fixed-top">
-      <a class="navbar-brand pl-3" href="#">
-        <img src="{% static "logo.png"%}" width="30" height="30" class="d-inline-block align-top mr-3" alt="">
-        S.A.Z.F
-      </a>
-      <input type="text" placeholder="Wyszukaj.." class="search">
-    </nav>
-<div style="height:56px;"> </div>
+ <nav class=" navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#"><img src="{% static "logo.png"%}" width="30" height="30" class="d-inline-block align-top mr-3" alt="">
+        S.A.Z.F</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent-555" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+
+
+    </ul>
+    <ul class="navbar-nav ml-auto nav-flex-icons">
+      <li class="nav-item">
+        <a class="nav-link waves-effect waves-light" href="{% url 'messages' %}">
+          <i class="fas fa-envelope" ></i>
+        </a>
+      </li>
+      <li class="nav-item avatar dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          <img src="{{user.profile_photo.url}}" class="rounded-circle z-depth-0"
+            alt="avatar image"  style="max-height: 25px; max-width: 25px;">
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg-right dropdown-secondary"
+          aria-labelledby="navbarDropdownMenuLink-55">
+          <a class="dropdown-item" href="{% url 'profile' %}">Profile</a>
+
+          <a class="dropdown-item" href="{%url 'logout'%}">Logout</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
 <div class="container-fluid">
 <div class="row">
 
@@ -38,13 +67,15 @@
         <a href="#" class="list-group-item list-group-item-action bg-light">Calendary</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Lessons</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Session</a>
-        <a href="{% url 'messages' %}" class="list-group-item list-group-item-action bg-light">Messages</a>
-        <a href="{% url 'profile' %}" class="list-group-item list-group-item-action bg-light">Profile</a>
+
+
         <a href="{% url 'notes' %}" class="list-group-item list-group-item-action bg-light">Notes</a>
       </div>
     </div>
-    <div class="container">
-
+    <div class="container m-0">
+    <div class="p-3 mb-2 w-100 bg-dark text-white rounded-bottom no-margin">
+  <p>{%block title%}{%endblock%}</p>
+</div>
       {%block content%}
         {%endblock%}
     </div>

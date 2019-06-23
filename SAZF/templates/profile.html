@@ -1,16 +1,23 @@
 {%extends "base.html" %}
-
+{%block title%}Profile{%endblock%}
 
 {%block content%}
 
 {%for teacher in profile%}
+<h1>Name</h1>
 <p>{{teacher.name}}</p>
+<h1>Surname</h1>
 <p>{{teacher.surname}}</p>
+<h1>Age</h1>
 <p>{{teacher.age}}</p>
+<h1>Joined</h1>
 <p>{{teacher.age_of_enter}}</p>
-<p>{{teacher.have_class}}</p>
+
+{%if teacher.have_class is not None%}
+<h1>Current Class</h1>
 <p>{{teacher.clas}}</p>
-<button onclick="location.href='{%url 'edit-profile'%}';">Edit profile</button>
+{%endif%}
+<button type="button" class="btn btn-primary" onclick="location.href='{%url 'edit-profile'%}';">Edit profile</button>
 {%endfor%}
 
 {%endblock%}

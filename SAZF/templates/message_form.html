@@ -1,11 +1,15 @@
 {%extends "base.html" %}
-
+{% load widget_tweaks %}
 {%block content%}
 
 
 <form method="post">{% csrf_token %}
-    {{form.as_p}}
-    <input type="submit" value="Send!">
-</form>
+    <p>{{ form.owner.label_tag }}</p>
+  <p>{{ form.owner|add_class:'form-control'  }}</p>
+    <p>{{ form.topic.label_tag }}</p>
+  <p>{{ form.topic|add_class:'form-control'  }}</p>
+    <p>{{ form.content.label_tag }}</p>
+  <p>{{ form.content|add_class:'form-control'  }}</p>
+<button type="submit" class="btn btn-primary">Send</button></form>
 
 {%endblock%}

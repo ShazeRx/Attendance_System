@@ -15,7 +15,7 @@ class CustomUserAdmin(UserAdmin):
     filter_horizontal = ()
     fieldsets = (
         (None, {
-            'fields': ('username','surname','age','have_class','age_of_enter','clas')
+            'fields': ('name','username','surname','age','have_class','age_of_enter','clas','profile_photo')
         }),
         ('Advanced options', {
             'classes': ('collapse',),

@@ -21,10 +21,11 @@ class Teacher(AbstractBaseUser,PermissionsMixin):
     clas=models.OneToOneField(Clas,on_delete=models.CASCADE,related_name='clas_teacher',null=True,blank=True)
     is_admin=models.BooleanField(default=False)
     is_staff = models.BooleanField(default=False)
+    profile_photo=models.ImageField(default='profile-default.jpg',null=True)
     USERNAME_FIELD='username'
     REQUIRED_FIELDS = []
     def save(self, *args, **kwargs):
-        if self.have_class==True:
+        if self.have_class==True and self.clas==None:
             raise ValueError("Insert valid class")
         super().save(*args,**kwargs)
     def get_full_name(self):

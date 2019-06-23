@@ -1,13 +1,28 @@
 {%extends "base.html" %}
-
+{%block title%}Messages{%endblock%}
 
 {%block content%}
+<button type="button" class="btn btn-primary" onclick="location.href='{%url 'new_message'%}';">New Message</button>
+<br><br>
+{% if object_list %}
 
+<div class="card-deck">
         {% for message in object_list %}
-<p>{{ message.topic }}</p>
-<p>{{message.sender}}</p>
-<p>{{message.content}}</p>
-<p>{{message.date}}</p>
+        <div class="card">
+
+    <div class="card-body">
+      <h5 class="card-title">{{message.sender}}-{{ message.topic }}</h5>
+      <p class="card-text">{{message.content}}</p>
+      <p class="card-text"><small class="text-muted">Sent {{message.date}}</small></p>
+            <button type="button" class="btn btn-primary" onclick="location.href='{%url 'message_detail' message.id%}';">View Message</button>
+    </div>
+</div>
         {% endfor %}
-<button onclick="location.href='{%url 'new_message'%}';">New Message</button>
+
+</div>
+{%else%}
+
+<h1>You have no messages</h1>
+{%endif%}
+
 {%endblock%}
